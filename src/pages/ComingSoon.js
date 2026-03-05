@@ -1,20 +1,10 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import logo from '../Assets/Car 24 logo.png';
 import CarSlider from '../components/CarSlider';
 import './ComingSoon.css';
 
 const ComingSoon = () => {
-  const [email, setEmail] = useState('');
-
-  const handleNotify = (e) => {
-    e.preventDefault();
-    if (email) {
-      alert(`Thank you! We'll notify you at ${email} when we launch!`);
-      setEmail('');
-    } else {
-      alert('Please enter your email address');
-    }
-  };
+  const [email, setEmail] = React.useState('');
 
   const carImages = [
     'https://applecarrentals.com/assets/web/images/mahindra-thar-red-rage.webp',
@@ -77,7 +67,15 @@ const ComingSoon = () => {
           </div>
 
           {/* Email Notification */}
-          {/* <form className="notify-form" onSubmit={handleNotify}>
+          <form className="notify-form" onSubmit={(e) => {
+            e.preventDefault();
+            if (email) {
+              alert(`Thank you! We'll notify you at ${email} when we launch!`);
+              setEmail('');
+            } else {
+              alert('Please enter your email address');
+            }
+          }}>
             <input
               type="email"
               placeholder="Enter your email to get notified"
@@ -90,7 +88,7 @@ const ComingSoon = () => {
               Notify Me
               <span className="arrow">→</span>
             </button>
-          </form> */}
+          </form>
 
           {/* Footer */}
           <div className="footer-text">

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import * as React from 'react';
 import './CarSlider.css';
 
 const CarSlider = ({ carImages }) => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = React.useState(0);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) =>
         prev === carImages.length - 1 ? 0 : prev + 1
@@ -16,14 +16,6 @@ const CarSlider = ({ carImages }) => {
 
   const goToSlide = (index) => {
     setCurrent(index);
-  };
-
-  const goToPrevious = () => {
-    setCurrent((prev) => (prev === 0 ? carImages.length - 1 : prev - 1));
-  };
-
-  const goToNext = () => {
-    setCurrent((prev) => (prev === carImages.length - 1 ? 0 : prev + 1));
   };
 
   return (
