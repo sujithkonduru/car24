@@ -4,8 +4,6 @@ import CarSlider from '../components/CarSlider';
 import './ComingSoon.css';
 
 const ComingSoon = () => {
-  const [email, setEmail] = React.useState('');
-
   const carImages = [
     'https://applecarrentals.com/assets/web/images/mahindra-thar-red-rage.webp',
     'https://carrentaldehradun.com/wp-content/uploads/2025/08/Untitled-design-35.png',
