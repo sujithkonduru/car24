@@ -67,7 +67,7 @@ const ComingSoon = () => {
           </div>
 
           {/* Email Notification */}
-          <form className="notify-form" onSubmit={(e) => {
+          {/* <form className="notify-form" onSubmit={(e) => {
             e.preventDefault();
             if (email) {
               alert(`Thank you! We'll notify you at ${email} when we launch!`);
@@ -88,7 +88,7 @@ const ComingSoon = () => {
               Notify Me
               <span className="arrow">→</span>
             </button>
-          </form>
+          </form> */}
 
           {/* Footer */}
           <div className="footer-text">
